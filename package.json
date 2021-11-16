@@ -42,7 +42,11 @@
     "lint": "eslint --ext .tsx,.ts .",
     "type:check": "tsc",
     "validate": "run-p lint type:check format:check",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "preanalyze": "npm run build",
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "depcheck": "npx depcheck",
+    "cloc": "npx cloc src"
   },
   "eslintConfig": {
     "extends": [
@@ -95,6 +99,7 @@
     "npm-run-all": "^4.1.5",
     "postcss": "^7.0.39",
     "prettier": "^2.4.1",
+    "source-map-explorer": "^2.5.2",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
   }
 }

@@ -16,18 +16,34 @@ function App() {
   const incrementValue = Number(incrementAmount) || 0
 
   return (
-    <div className='flex items-center justify-center h-screen bg-gray-50'>
-      <div className='max-w-md'>
-        <div className='text-3xl font-semibold'>CRA Boilerplate</div>
-        <div className='mt-2 text-base'>
+    <div className='py-12 bg-gray-50'>
+      <div className='max-w-md mx-auto'>
+        <h1 className='text-3xl font-semibold'>CRA Boilerplate</h1>
+        <div className='mt-4 text-gray-700'>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum,
+          laboriosam autem ipsam perferendis unde vero totam eligendi delectus
+          inventore hic porro sit doloremque in, accusamus quis libero
+          temporibus magni? Beatae culpa sint aliquid asperiores. quis libero
+          temporibus magni perferendis?
+        </div>
+        <div className='mt-4 text-gray-700'>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum,
           laboriosam autem ipsam perferendis unde vero totam eligendi delectus
           inventore hic porro sit doloremque in, accusamus quis libero
           temporibus magni? Beatae culpa sint aliquid asperiores.
         </div>
-        <div className='p-5 mt-6 bg-white border rounded shadow-lg'>
+        <div className='mt-4 text-gray-700'>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum,
+          laboriosam autem ipsam perferendis quis libero temporibus magni?
+          Beatae culpa sint aliquid asperiores.
+        </div>
+        <div className='mt-4 text-gray-700'>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        </div>
+        <h2 className='mt-6 text-xl font-semibold'>Demo</h2>
+        <div className='p-5 mt-2 bg-white border rounded shadow-lg'>
           <div>
-            <div className='font-mono text-right text-blue-700 text-7xl font-extralight'>
+            <div className='font-mono text-right text-blue-700 text-9xl font-extralight'>
               {count.status === 'loading' ? '...' : count.value}
             </div>
             <div className='flex justify-end mt-2 space-x-2'>
@@ -49,7 +65,7 @@ function App() {
               </button>
             </div>
           </div>
-          <div className='mt-6'>
+          <div className='mt-2'>
             <div className='my-2 text-xs text-gray-600'>Custom</div>
             <input
               id='increment-value'

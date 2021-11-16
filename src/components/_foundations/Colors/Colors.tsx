@@ -47,7 +47,10 @@ const ColorBox = ({
             : 'text-gray-900 border-gray-900 '
 
         return (
-          <div className={`w-full shadow-lg ${textColor} ${colorClass} group`}>
+          <div
+            key={colorClass}
+            className={`w-full shadow-lg ${textColor} ${colorClass} group`}
+          >
             <div className='flex items-center p-2 opacity-0 group-hover:opacity-100'>
               <div>{shade}</div>
               <button

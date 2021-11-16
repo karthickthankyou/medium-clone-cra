@@ -1,4 +1,3 @@
-import Avatar from 'src/components/atoms/Avatar'
 import Logo from 'src/components/atoms/Logo'
 import { BellReg, BookmarkAlt, SearchReg } from 'src/assets'
 

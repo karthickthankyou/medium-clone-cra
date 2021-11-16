@@ -1,12 +1,4 @@
-import {
-  LegacyRef,
-  MutableRefObject,
-  ReactElement,
-  UIEventHandler,
-  useEffect,
-  useRef,
-  useState,
-} from 'react'
+import { ReactElement } from 'react'
 import { ChevL, ChevR } from 'src/assets'
 import { useScroll } from 'src/hooks'
 
@@ -43,7 +35,9 @@ const HScroll = ({ children }: IHScrollProps) => {
         className='flex py-3 space-x-2 overflow-x-scroll scrollbar-hide'
       >
         {children.map((child) => (
-          <div className='flex-shrink-0'>{child}</div>
+          <div key={child.key} className='flex-shrink-0'>
+            {child}
+          </div>
         ))}
       </div>
     </div>

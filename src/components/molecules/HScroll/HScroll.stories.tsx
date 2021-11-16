@@ -17,23 +17,22 @@ const Template: ComponentStory<typeof HScroll> = ({ children }) => (
 export const Primary = Template.bind({})
 Primary.args = {
   children: [
-    <Badge displayText='Hello' />,
-    <Badge displayText='Hello 2' />,
-    <Badge displayText='Hello 3' />,
-    <Badge displayText='Hello 4' />,
-    <Badge displayText='Hello 5' />,
-    <Badge displayText='Hello 6' />,
-    <Badge displayText='Hello 7' />,
-    <Badge displayText='Hello 8' />,
-    <Badge displayText='Hello 9' />,
-    <Badge displayText='Hello 10' />,
+    <Badge key='Hello' displayText='Hello' />,
+    <Badge key='Hello 2' displayText='Hello 2' />,
+    <Badge key='Hello 3' displayText='Hello 3' />,
+    <Badge key='Hello 4' displayText='Hello 4' />,
+    <Badge key='Hello 5' displayText='Hello 5' />,
+    <Badge key='Hello 6' displayText='Hello 6' />,
+    <Badge key='Hello 7' displayText='Hello 7' />,
+    <Badge key='Hello 8' displayText='Hello 8' />,
+    <Badge key='Hello 9' displayText='Hello 9' />,
+    <Badge key='Hello 10' displayText='Hello 10' />,
   ],
 }
 export const Avatars = Template.bind({})
 Avatars.args = {
   children: [
-    <Link to='/'>
-      {' '}
+    <Link key='hello' to='/'>
       <Avatar
         count={70}
         rounded
@@ -41,12 +40,10 @@ Avatars.args = {
         src='static/media/image.0c26331b.jpg'
       />
     </Link>,
-    <Link to='/'>
-      {' '}
-      <Avatar count={9} size='lg' src='static/media/image.0c26331b.jpg' />{' '}
+    <Link key='hello2' to='/'>
+      <Avatar count={9} size='lg' src='static/media/image.0c26331b.jpg' />
     </Link>,
-    <Link to='/'>
-      {' '}
+    <Link key='hello3' to='/'>
       <Avatar
         count={6}
         rounded
@@ -54,8 +51,7 @@ Avatars.args = {
         src='static/media/image.0c26331b.jpg'
       />
     </Link>,
-    <Link to='/'>
-      {' '}
+    <Link key='hello4' to='/'>
       <Avatar
         count={2}
         rounded
@@ -63,8 +59,7 @@ Avatars.args = {
         src='static/media/image.0c26331b.jpg'
       />
     </Link>,
-    <Link to='/'>
-      {' '}
+    <Link key='hello5' to='/'>
       <Avatar
         count={0}
         rounded
@@ -72,8 +67,7 @@ Avatars.args = {
         src='static/media/image.0c26331b.jpg'
       />
     </Link>,
-    <Link to='/'>
-      {' '}
+    <Link key='hello6' to='/'>
       <Avatar
         count={0}
         rounded
@@ -81,12 +75,10 @@ Avatars.args = {
         src='static/media/image.0c26331b.jpg'
       />
     </Link>,
-    <Link to='/'>
-      {' '}
+    <Link key='hello7' to='/'>
       <Avatar count={0} size='lg' src='static/media/image.0c26331b.jpg' />
     </Link>,
-    <Link to='/'>
-      {' '}
+    <Link key='hello8' to='/'>
       <Avatar
         count={0}
         rounded

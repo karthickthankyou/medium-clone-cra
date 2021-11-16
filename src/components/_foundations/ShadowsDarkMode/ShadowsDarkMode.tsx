@@ -21,6 +21,7 @@ const ShadowsDarkMode = () => (
             { title: 'shadow-2xl', bgColor: 'bg-gray-300' },
           ].map(({ title, bgColor }) => (
             <div
+              key={title}
               className={`px-3 py-4 mt-2 text-gray-50  rounded ${title} ${bgColor}  `}
             >
               {title}

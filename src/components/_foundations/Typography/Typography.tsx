@@ -17,7 +17,7 @@ const RenderScale = ({
     <div className='text-2xl '>{title}</div>
     <div className='grid grid-cols-1 gap-4 mt-3 -ml-2'>
       {input.map((style) => (
-        <div className='pl-2 border-l border-primary-200'>
+        <div key={style.title} className='pl-2 border-l border-primary-200'>
           <div className='flex'>
             <div className='inline-block px-1 py-0.5 text-xs text-primary-800 bg-primary-100 rounded-sm'>
               {style.title}

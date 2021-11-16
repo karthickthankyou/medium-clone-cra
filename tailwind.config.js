@@ -2,6 +2,7 @@
 const lineClamp = require('@tailwindcss/line-clamp')
 const aspectRatio = require('@tailwindcss/aspect-ratio')
 const tailwindScrollbarHide = require('tailwind-scrollbar-hide')
+const colors = require('tailwindcss/colors')
 
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
@@ -17,7 +18,12 @@ module.exports = {
       relaxed: ' 1.625',
       loose: ' 2',
     },
-    extend: {},
+    extend: {
+      colors: {
+        primary: colors.blue,
+        secondary: colors.indigo,
+      },
+    },
   },
   variants: {
     extend: {},

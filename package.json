@@ -50,7 +50,8 @@
     "prepare": "husky install",
     "preanalyze": "npm run build",
     "analyze": "source-map-explorer 'build/static/js/*.js'",
-    "depcheck": "npx depcheck",
+    "depcheck": "npx depcruise --config .dependency-cruiser.js src",
+    "depcheck:graph": "npx depcruise --include-only '^src' --output-type dot src | dot -T svg > dependencygraph.svg",
     "cloc": "npx cloc src"
   },
   "eslintConfig": {
@@ -96,6 +97,7 @@
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
     "autoprefixer": "^9.8.8",
+    "dependency-cruiser": "^10.7.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.3.0",

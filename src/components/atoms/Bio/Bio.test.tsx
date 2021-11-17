@@ -1,10 +1,9 @@
 import React from 'react'
-import { render } from '@testing-library/react'
 import Bio from './Bio'
+import { renderWithProviders } from 'src/utils/testUtils'
 
 describe('Bio Component', () => {
-  test('it should match the snapshot', () => {
-    const { asFragment } = render(<Bio src='' author='Karthick' />)
-    expect(asFragment()).toMatchSnapshot()
+  test('should render', () => {
+    renderWithProviders(<Bio src='' author='Karthick' />)
   })
 })

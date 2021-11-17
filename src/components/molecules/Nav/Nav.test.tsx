@@ -1,10 +1,10 @@
 import React from 'react'
 import { render } from '@testing-library/react'
 import Nav from './Nav'
+import { renderWithProviders } from 'src/utils/testUtils'
 
 describe('Nav Component', () => {
-  test('it should match the snapshot', () => {
-    const { asFragment } = render(<Nav />)
-    expect(asFragment()).toMatchSnapshot()
+  test('should render', () => {
+    renderWithProviders(<Nav />)
   })
 })

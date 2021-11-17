@@ -1,10 +1,9 @@
 import React from 'react'
-import { render } from '@testing-library/react'
 import Badge from './Badge'
+import { renderWithProviders } from 'src/utils/testUtils'
 
 describe('Badge Component', () => {
-  test('it should match the snapshot', () => {
-    const { asFragment } = render(<Badge displayText='Hello' />)
-    expect(asFragment()).toMatchSnapshot()
+  test('should render', () => {
+    renderWithProviders(<Badge displayText='Hello' />)
   })
 })

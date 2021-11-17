@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import * as Sentry from '@sentry/react'
 import { useAppDispatch, useAppSelector } from './store'
 import {
   decrement,
@@ -14,6 +15,8 @@ function App() {
   const [incrementAmount, setIncrementAmount] = useState('2')
 
   const incrementValue = Number(incrementAmount) || 0
+  const obj = { msg: 'Objects are not valid as a React child' }
+  const [text, textSetter] = useState<string>(JSON.stringify(obj))
 
   return (
     <div className='py-12 bg-gray-50'>
@@ -40,7 +43,40 @@ function App() {
         <div className='mt-4 text-gray-700'>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit.
         </div>
-        <h2 className='mt-6 text-xl font-semibold'>Demo</h2>
+        <h2 className='mt-6 text-xl font-semibold'>Error Boundary</h2>
+        <div className='mt-4 text-gray-700'>
+          Error boundary saves the application from crashing. We can wrap the
+          whole application with error boundary but for this demo, I surrounded
+          this part of the application. We also use sentry to automatically
+          track these errors.
+        </div>
+        <Sentry.ErrorBoundary
+          showDialog
+          fallback={
+            <p className='my-4'>
+              An error has occurred!{' '}
+              <button
+                onClick={() => {
+                  window.location.reload()
+                }}
+              >
+                Reload Page
+              </button>{' '}
+            </p>
+          }
+        >
+          <div className='p-3 mt-4 bg-gray-100 rounded-sm'>{text}</div>
+          <button
+            className='my-4 text-white bg-red-600 btn'
+            onClick={() => {
+              /* @ts-ignore */
+              textSetter(obj)
+            }}
+          >
+            Break the world!
+          </button>
+        </Sentry.ErrorBoundary>
+        <h2 className='mt-6 text-xl font-semibold'>Redux Demo</h2>
         <div className='p-5 mt-2 bg-white border rounded shadow-lg'>
           <div>
             <div className='font-mono text-right text-blue-700 text-9xl font-extralight'>

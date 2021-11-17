@@ -6,6 +6,18 @@ import App from './App'
 import { store } from './store'
 import * as serviceWorkerRegistration from './serviceWorkerRegistration'
 import reportWebVitals from './reportWebVitals'
+import { Integrations } from '@sentry/tracing'
+import * as Sentry from '@sentry/react'
+
+Sentry.init({
+  // dsn: 'https://2d2001a21f904f3782b2020a0a212f9e@o927079.ingest.sentry.io/6067025' /* enter the dsn value from sentry */,
+  dsn: process.env.REACT_APP_SENTRY_DSN,
+  integrations: [new Integrations.BrowserTracing()],
+
+  // We recommend adjusting this value in production, or using tracesSampler
+  // for finer control
+  tracesSampleRate: 1.0,
+})
 
 ReactDOM.render(
   <React.StrictMode>

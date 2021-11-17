@@ -14,7 +14,7 @@ const Avatar = ({
   shadow = false,
 }: IAvatarProps) => {
   const sizeCls = {
-    sm: 'w-5 h-5',
+    sm: 'w-6 h-6',
     md: 'w-14 h-14',
     lg: 'w-20 h-20 p-0.5',
   }

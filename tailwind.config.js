@@ -16,17 +16,17 @@ module.exports = {
       snug: ' 1.375',
       normal: ' 1.5',
       relaxed: ' 1.625',
-      loose: ' 2'
+      loose: ' 2',
     },
     extend: {
       colors: {
         primary: colors.blue,
-        secondary: colors.indigo
-      }
-    }
+        secondary: colors.indigo,
+      },
+    },
   },
   variants: {
-    extend: {}
+    extend: {},
   },
-  plugins: [tailwindScrollbarHide, lineClamp, aspectRatio]
+  plugins: [tailwindScrollbarHide, lineClamp, aspectRatio],
 }

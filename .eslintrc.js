@@ -2,15 +2,15 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    jest: true
+    jest: true,
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
     ecmaVersion: 12,
-    sourceType: 'module'
+    sourceType: 'module',
   },
   plugins: ['react', '@typescript-eslint', 'security', 'jsx-a11y'],
   extends: [
@@ -18,13 +18,13 @@ module.exports = {
     'plugin:jsx-a11y/recommended',
     'plugin:security/recommended',
     'standard',
-    'prettier'
+    'prettier',
   ],
   rules: {
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
     'no-unused-vars': 'warn',
     'no-use-before-define': 'off',
-    '@typescript-eslint/no-use-before-define': 'error'
-  }
+    '@typescript-eslint/no-use-before-define': 'error',
+  },
 }

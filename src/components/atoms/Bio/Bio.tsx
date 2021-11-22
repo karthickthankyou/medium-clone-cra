@@ -11,7 +11,7 @@ const Bio = ({ src, author, publisher }: IBioProps) => (
   <div className='flex items-center text-xs'>
     <Link to='/'>
       <Avatar
-        size='sm'
+        size='md'
         // src='https://api.adorable.io/avatars/285/10@adorable.io.png'
         src={src}
       />

@@ -15,15 +15,15 @@ const Avatar = ({
 }: IAvatarProps) => {
   const sizeCls = {
     sm: 'w-6 h-6',
-    md: 'w-14 h-14',
-    lg: 'w-20 h-20 p-0.5',
+    md: 'w-12 h-12',
+    lg: 'w-24 h-24 p-0.5',
   }
   return (
     <div className={` overflow-hidden p-1 inline-block relative `}>
       <img
         src={src}
         alt=''
-        className={`object-cover  ${shadow && 'shadow-lg'} ${
+        className={`object-cover   ${shadow && 'shadow-lg'} ${
           rounded ? 'rounded-full' : 'rounded'
         } ${sizeCls[size]}`}
       />

@@ -21,6 +21,7 @@ const Shadows = () => (
             'shadow-2xl',
           ].map((shadow) => (
             <div
+              key={shadow}
               className={`px-2 py-4 mt-2 bg-white rounded ${shadow} bg-gray-50 border border-white`}
             >
               {shadow}

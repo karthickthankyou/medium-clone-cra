@@ -1,5 +1,4 @@
 import Bio from 'src/components/atoms/Bio'
-import Text from 'src/components/atoms/Text'
 import CardFooter from 'src/components/atoms/CardFooter'
 import img from 'src/assets/image.jpg'
 

@@ -1,10 +1,10 @@
 import React from 'react'
 import { render } from '@testing-library/react'
 import SubMainCard from './SubMainCard'
+import { renderWithProviders } from 'src/utils/testUtils'
 
 describe('SubMainCard Component', () => {
-  test('it should match the snapshot', () => {
-    const { asFragment } = render(<SubMainCard title='Hello' />)
-    expect(asFragment()).toMatchSnapshot()
+  test('should render', () => {
+    renderWithProviders(<SubMainCard title='Hello' />)
   })
 })

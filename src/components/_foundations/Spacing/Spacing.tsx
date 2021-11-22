@@ -24,7 +24,7 @@ const Spacing = () => (
         ['w-15', '24rem'],
         ['w-16', '32rem'],
       ].map(([size, text]) => (
-        <div className='flex items-center my-2 -ml-6'>
+        <div key={size} className='flex items-center my-2 -ml-6'>
           <div className='w-6 px-2 text-gray-800'>{size.split('-')[1]}</div>
           <div className={`h-3 ${size} bg-primary-500 rounded-sm`} />
           <div className='w-6 px-3 text-sm text-gray-600'>{text}</div>
